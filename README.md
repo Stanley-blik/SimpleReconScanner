@@ -7,7 +7,7 @@
 ## 📚 Learn More About Reconnaissance
 To understand **why reconnaissance is important**, see this educational repo:
 
-🔗 [Cyber Security Learnings - Reconnaissance](https://github.com/Stanley-blik/CyberSec-Learnings-Reconnaissance)
+🔗 [Cyber Security Learnings - Reconnaissance](https://github.com/Stanley-blik/CyberSec-Learnings-Reconnaissance)<br>
 🔗 [Banner Grabbing Detailed Explanation](https://banner-grabber.vercel.app/)
 
 ---
