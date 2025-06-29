@@ -8,6 +8,7 @@
 To understand **why reconnaissance is important**, see this educational repo:
 
 🔗 [Cyber Security Learnings - Reconnaissance](https://github.com/Stanley-blik/CyberSec-Learnings-Reconnaissance)
+🔗 [Banner Grabbing Detailed Explanation](https://banner-grabber.vercel.app/)
 
 ---
 
