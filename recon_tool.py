@@ -1,24 +1,47 @@
 import socket
 import sys
+import os
+from colorama import Fore, Style, init
+
+# Initialize colorama
+init(autoreset=True)
+
+def clear_screen():
+    os.system("clear")
+
+def banner():
+    print(Fore.CYAN + Style.BRIGHT + r"""
+                                                                                       
+
+  _ \  __|   __|   _ \   \ |    __ __| _ \   _ \  |    
+    /  _|   (     (   | .  | ____| |  (   | (   | |    
+ _|_\ ___| \___| \___/ _|\_|      _| \___/ \___/ ____| 
+ 
+                              GitHub => Stanley-blik    
+    """)
+    print(Fore.GREEN + "          CyberSec Tool 1 - SimpleReconScanner\n")
+    print(Fore.YELLOW + "        [+] Author: Stanley (The Cyber Security Bro)\n")
 
 def scan_port(target_ip, port):
     s = socket.socket()
     s.settimeout(1)
     result = s.connect_ex((target_ip, port))
     if result == 0:
-        print(f"[+] Port {port} is OPEN")
+        print(Fore.GREEN + f"[+] Port {port} is OPEN")
         try:
             s.send(b'Hello\r\n')
             banner = s.recv(1024)
-            print(f"    Banner: {banner.decode().strip()}")
+            print(Fore.MAGENTA + f"    Banner: {banner.decode().strip()}")
         except:
-            print("    No banner received.")
+            print(Fore.RED + "    No banner received.")
     s.close()
 
 def main():
-    target_ip = input("Enter target IP address: ")
+    clear_screen()
+    banner()
 
-    # Common ports only (faster)
+    target_ip = input(Fore.CYAN + "[?] Enter target IP address: ")
+
     ports = [
         21,   # FTP
         22,   # SSH
@@ -33,16 +56,16 @@ def main():
         8080  # HTTP-alt
     ]
 
-    print(f"\n[*] Starting scan on {target_ip}\n")
+    print(Fore.YELLOW + f"\n[*] Starting scan on {target_ip}\n")
 
     try:
         for port in ports:
             scan_port(target_ip, port)
     except KeyboardInterrupt:
-        print("\n[!] Scan interrupted by user.")
+        print(Fore.RED + "\n[!] Scan interrupted by user.")
         sys.exit()
 
-    print("\n[*] Scan complete.")
+    print(Fore.GREEN + "\n[*] Scan complete.")
 
 if __name__ == "__main__":
     main()
