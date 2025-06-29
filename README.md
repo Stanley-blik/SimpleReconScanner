@@ -4,6 +4,13 @@
 
 ---
 
+## 📚 Learn More About Reconnaissance
+To understand **why reconnaissance is important**, see this educational repo:
+
+🔗 [Cyber Security Learnings - Reconnaissance](https://github.com/Stanley-blik/CyberSec-Learnings-Reconnaissance)
+
+---
+
 ## 🛡️ Features
 
 - Scans TCP ports **1–1024** on a target IP address
